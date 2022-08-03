@@ -1,0 +1,96 @@
+.instruction{
+    background-color: $defaultColor;
+    .instruction__container{
+        padding: 75px 0px 0px 0px;
+        .instruction__list{
+            display: flex;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            position: relative;
+
+            &::before{
+                content: '';
+                display: block;
+                width: 1050px;
+                height: 10px;
+                background-color: #E5ECF4;
+                position: absolute;
+                z-index: 0;
+                left: -200px;
+                top: 40px;
+            }
+            .instruction__list-item{
+                text-align: left;
+                margin-left: 40px;
+                z-index: 2;
+                .instruction__title{
+                    color: #495567;
+                    font-size: 1.5rem;
+                    font-style: normal;
+                    padding: 20px 0px 20px 0px;
+                    font-family: 'Space Mono';
+                }
+            }
+            .instruction__list-item:first-child{
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .instruction{
+        .instruction__container{
+            .instruction__list{
+                flex-direction: column;
+
+                &::before{
+                    top: 300px;
+                    left: -250px;
+                    width: 600px;
+                    transform: rotateZ(90deg);
+                }
+                .instruction__list-item{
+                    display: flex;
+                    width: 100%;
+                    margin: 50px 0px 0px 0px;
+                    img{
+                        margin: 30px 0px 0px 0px;
+                    }
+                    .instruction__paragraph{
+                        padding-left: 50px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .instruction{
+        .instruction__container{
+            .instruction__list{
+                flex-direction: column;
+                text-align: center;
+
+                &::before{
+                    display: none;
+                }
+                .instruction__list-item{
+                    margin-top: 50px;
+                    display: block;
+                    text-align: center;
+                    img{
+                        margin: 0px 0px 0px 35px;
+                    }
+                    .instruction__paragraph{
+                        text-align: center;
+                    }
+                }
+                
+            }
+        }
+    }
+}

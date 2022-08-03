@@ -1,0 +1,80 @@
+.footer{
+    background-color: #333A44;
+    .footer__container{
+        align-items: center;
+        padding: 35px 0px;
+        display: flex;
+        position: relative;
+        a{
+            .footer__logo{
+                width: 107px;
+                height: 29px;
+            }
+        }
+        .footer__navbar{
+            width: 30%;
+            margin-left: 25px;
+            .footer__navbar-list{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                list-style: none;
+                .footer__navbar-link{
+                    text-decoration: none;
+                    color: #939CAA;
+                    font-size: 0.938rem;
+                    line-height: 25px;
+                    font-weight: 700;
+                }
+                .footer__navbar-link:active{
+                    color: #FCB72B;
+                }
+            }
+        }
+        .social-media{
+            display: flex;
+            justify-content: space-between;
+            width: 80px;
+            position: absolute;
+            right: 0;
+            list-style: none;
+            .social-media__item{
+                color: #FCB72B;
+                cursor: pointer;
+            }
+            .social-media__item:active{
+                color: $defaultColor;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .footer{
+        margin: 0;
+    }
+}
+@media only screen and (max-width: $mobile) {
+    .footer{
+        .footer__container{
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            a{
+                min-width: 100%;
+            }
+            .footer__navbar{
+                text-align: center;
+                max-width: 100%;
+                .footer__navbar-list{
+                    flex-direction: column;
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+            .social-media{
+                margin: 0 auto;
+            }
+        }
+    }
+}

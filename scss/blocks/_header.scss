@@ -1,0 +1,143 @@
+.header{
+    .header__container{
+        padding: 30px 0px 30px 0px;
+        align-items: center;
+        display: flex;
+        position: relative;
+        .dropdown{
+            display: none;
+            .burger-btn{
+                display: none;
+                position: relative;
+                width: 20px;
+                height: 16px;
+                border: none;
+                background-color: $defaultColor;
+                .burger-menu{
+                    height: 4px;
+                    width: 20px;
+                    display: block;
+                    background-color: #FCB72B;
+                    position: relative;
+    
+                    &::before{
+                        content: '';
+                        width: 20px;
+                        height: 4px;
+                        left: 0;
+                        position: absolute;
+                        background-color: #FCB72B;
+                        top: -6.5px;
+                    }
+                    &::after{
+                        content: '';
+                        width: 20px;
+                        height: 4px;
+                        left: 0;
+                        position: absolute;
+                        background-color: #FCB72B;
+                        top: 6.5px;
+                    }
+                }
+            }
+            .burger-btn:hover{
+                transform: translateX(15px);
+                cursor: pointer;
+            }
+            .dropdown__content{
+                display: none;
+                width: 55%;
+                height: 400px;
+                border-radius: 10px;
+                position: absolute;
+                z-index: 100;
+                padding: 32px 0px 0px 32px;
+                left: 0;
+                top: 70px;
+                transition: 5s;
+                transform: translateX(-100%);
+                background: #333A44;
+                .dropdown__content-link{
+                     @include links;
+                     padding: 24px 0px 0px 0px;   
+                }
+                .dropdown__link{
+                    @include link;
+                    bottom: 50px;
+                }
+            }
+            .burger-btn:hover ~.dropdown__content{
+                transform: translateX(0);
+            }
+        }
+        
+        .navbar{
+            padding: 0px 0px 0px 30px;
+            width: 25%;
+            .navbar__list{
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .navbar__list-item{
+                    display: block;
+                    .navbar__list-link{
+                        @include links;
+                    }
+                    .navbar__list-link:active{
+                        color: #FCB72B;
+                    }
+                }
+            }
+        }
+        .header__container-link{
+            @include link;
+            right: 0;
+        }
+        .header__container-link:active{
+            color: #FCB72B;
+            border: 1px solid #FCB72B;
+            background: none;
+        }
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .header{
+        .header__container{
+            padding: 35px 0px 0px 0px;
+            .navbar{
+                width: 35%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .header{
+        .header__container{
+            .header__link{
+                margin: 0 auto;
+            }
+            .dropdown{
+                display: block;
+                .burger-btn{
+                    display: block;
+                }
+                .dropdown__content{
+                    display: none;
+                }
+                .burger-btn:hover ~ .dropdown__content{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .navbar{
+                display: none;
+            }
+            .header__container-link{
+                display: none;
+            }
+        }
+    }
+}

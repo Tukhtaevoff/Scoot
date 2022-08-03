@@ -1,0 +1,58 @@
+.signing{
+    margin: 100px 0px 0px 0px;
+    background-image: url(../../images/Mask.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .signing__container{
+        padding: 102px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+         .sign-up{
+            max-width: 445px;
+            font-size: 3rem;
+            color: $defaultColor;
+            font-family: 'Space Mono';
+            font-weight: 700;
+            line-height: 56px;
+            font-style: normal;
+         }
+         .download-box{
+            display: flex;
+            a{
+                .app-store{
+                    width: 159px;
+                    height: 56px;
+                    margin-right: 20px;
+                }
+                .play-market{
+                    width: 182px;
+                    height: 56px;
+                }
+            }
+         }
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .signing{
+        .signing__container{
+            padding: 62px 0px 62px 0px;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
+@media only screen and (max-width: $mobile) {
+    .signing{
+        .signing__container{
+            padding: 60px 0px;
+            .sign-up{
+                font-size: 2rem;
+                max-width: 311px;
+                line-height: 32px;
+            }
+        }
+    }
+}

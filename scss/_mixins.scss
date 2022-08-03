@@ -1,0 +1,31 @@
+@mixin link {
+    text-align: center;
+    text-decoration: none;
+    color: $defaultColor;
+    font-size: 0.938rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 25px;
+    padding: 13px 35px;
+    background-color: #FCB72B;
+    border: none;
+    position: absolute;
+    font-family: 'Space Mono';
+}
+
+@mixin links {
+    text-decoration: none;
+    color: #939CAA;
+    font-size: 0.938rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 25px;
+}
+@mixin title {
+    font-size: 3rem;
+                line-height: 48px;
+                color: #495567;
+                font-family: 'Space Mono';
+                max-width: 495px;
+                font-weight: 700;
+}
