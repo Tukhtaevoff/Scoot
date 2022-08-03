@@ -1054,6 +1054,9 @@ template {
   justify-content: space-between;
   align-items: center;
 }
+.signing .signing__container .signup {
+  display: none;
+}
 .signing .signing__container .sign-up {
   max-width: 445px;
   font-size: 3rem;
