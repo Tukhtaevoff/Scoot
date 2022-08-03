@@ -509,9 +509,11 @@ template {
 @media only screen and (max-width: 798px) {
   .header .header__container .header__link {
     margin: 0 auto;
+    padding-bottom: 30px;
   }
   .header .header__container .dropdown {
     display: block;
+    margin-bottom: 30px;
   }
   .header .header__container .dropdown .burger-btn {
     display: block;
